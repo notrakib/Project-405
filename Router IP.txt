@@ -1,0 +1,357 @@
+--Router 1
+120.1.0.1
+120.2.0.1
+120.3.0.1
+120.4.0.1
+120.5.0.1
+--Router 2
+120.1.0.2
+120.6.0.2
+120.7.0.2
+120.8.0.2
+120.9.0.2
+--Router 3
+120.9.0.3
+120.2.0.3
+120.10.0.3
+120.11.0.3
+120.12.0.3
+--Router 4
+120.12.0.4
+120.8.0.4
+120.3.0.4
+120.13.0.4
+120.14.0.4
+--Router 5
+120.14.0.5
+120.11.0.5
+120.7.0.5
+120.4.0.5
+120.15.0.5
+--Router 6
+120.15.0.6
+120.13.0.6
+120.10.0.6
+120.6.0.6
+120.5.0.6
+
+
+--Router 1
+config t
+interface se2/0
+ip address 120.1.0.1 255.255.0.0
+clock rate 64000
+no shut
+do wr
+exit
+
+config t
+interface se6/0
+ip address 120.2.0.1 255.255.0.0
+clock rate 64000
+no shut
+do wr
+exit
+
+config t
+interface se7/0
+ip address 120.3.0.1 255.255.0.0
+clock rate 64000
+no shut
+do wr
+exit
+
+config t
+interface se8/0
+ip address 120.4.0.1 255.255.0.0
+clock rate 64000
+no shut
+do wr
+exit
+
+config t
+interface se3/0
+ip address 120.5.0.1 255.255.0.0
+no shut
+do wr
+exit
+
+config t
+interface fa1/0
+ip address 192.168.10.62 255.255.255.224
+no shut
+do wr
+exit
+
+config t
+interface fa0/0
+ip address 192.168.10.94 255.255.255.224
+no shut
+do wr
+exit
+
+--Router 2
+config t
+interface se2/0
+ip address 120.1.0.2 255.255.0.0
+no shut
+do wr
+exit
+
+config t
+interface se7/0
+ip address 120.6.0.2 255.255.0.0
+clock rate 64000
+no shut
+do wr
+exit
+
+config t
+interface se8/0
+ip address 120.7.0.2 255.255.0.0
+clock rate 64000
+no shut
+do wr
+exit
+
+config t
+interface se6/0
+ip address 120.8.0.2 255.255.0.0
+clock rate 64000
+no shut
+do wr
+exit
+
+config t
+interface se3/0
+ip address 120.9.0.2 255.255.0.0
+clock rate 64000
+no shut
+do wr
+exit
+
+config t
+interface fa0/0
+ip address 128.0.10.254 255.255.255.0
+no shut
+do wr
+exit
+
+config t
+interface fa1/0
+ip address 128.0.11.254 255.255.255.0
+no shut
+do wr
+exit
+
+
+--Router 3
+config t
+interface se2/0
+ip address 120.9.0.3 255.255.0.0
+no shut
+do wr
+exit
+
+config t
+interface se6/0
+ip address 120.2.0.3 255.255.0.0
+no shut
+do wr
+exit
+
+config t
+interface se8/0
+ip address 120.10.0.3 255.255.0.0
+clock rate 64000
+no shut
+do wr
+exit
+
+config t
+interface se7/0
+ip address 120.11.0.3 255.255.0.0
+clock rate 64000
+no shut
+do wr
+exit
+
+config t
+interface se3/0
+ip address 120.12.0.3 255.255.0.0
+clock rate 64000
+no shut
+do wr
+exit
+
+config t
+interface fa0/0
+ip address 128.0.20.254 255.255.255.0
+no shut
+do wr
+exit
+
+config t
+interface fa1/0
+ip address 128.0.21.254 255.255.255.0
+no shut
+do wr
+exit
+
+
+--Router 4
+config t
+interface se2/0
+ip address 120.12.0.4 255.255.0.0
+no shut
+do wr
+exit
+
+config t
+interface se7/0
+ip address 120.8.0.4 255.255.0.0
+no shut
+do wr
+exit
+
+config t
+interface se6/0
+ip address 120.3.0.4 255.255.0.0
+no shut
+do wr
+exit
+
+config t
+interface se8/0
+ip address 120.13.0.4 255.255.0.0
+clock rate 64000
+no shut
+do wr
+exit
+
+config t
+interface se3/0
+ip address 120.14.0.4 255.255.0.0
+clock rate 64000
+no shut
+do wr
+exit
+
+config t
+interface fa0/0
+ip address 128.0.30.254 255.255.255.0
+no shut
+do wr
+exit
+
+config t
+interface fa1/0
+ip address 128.0.31.254 255.255.255.0
+no shut
+do wr
+exit
+
+
+--Router 5
+config t
+interface se2/0
+ip address 120.14.0.5 255.255.0.0
+no shut
+do wr
+exit
+
+config t
+interface se7/0
+ip address 120.11.0.5 255.255.0.0
+no shut
+do wr
+exit
+
+config t
+interface se8/0
+ip address 120.7.0.5 255.255.0.0
+no shut
+do wr
+exit
+
+config t
+interface se6/0
+ip address 120.4.0.5 255.255.0.0
+no shut
+do wr
+exit
+
+config t
+interface se3/0
+ip address 120.15.0.5 255.255.0.0
+clock rate 64000
+no shut
+do wr
+exit
+
+config t
+interface fa0/0
+ip address 128.0.40.254 255.255.255.0
+no shut
+do wr
+exit
+
+config t
+interface fa1/0
+ip address 128.0.41.254 255.255.255.0
+no shut
+do wr
+exit
+
+
+--Router 6
+config t
+interface se2/0
+ip address 120.15.0.6 255.255.0.0
+no shut
+do wr
+exit
+
+config t
+interface se7/0
+ip address 120.13.0.6 255.255.0.0
+no shut
+do wr
+exit
+
+config t
+interface se6/0
+ip address 120.10.0.6 255.255.0.0
+no shut
+do wr
+exit
+
+config t
+interface se8/0
+ip address 120.6.0.6 255.255.0.0
+no shut
+do wr
+exit
+
+config t
+interface se3/0
+ip address 120.5.0.6 255.255.0.0
+clock rate 64000
+no shut
+do wr
+exit
+
+config t
+interface fa0/0
+ip address 128.0.50.254 255.255.255.0
+no shut
+do wr
+exit
+
+config t
+interface fa1/0
+ip address 128.0.51.254 255.255.255.0
+no shut
+do wr
+exit
+
